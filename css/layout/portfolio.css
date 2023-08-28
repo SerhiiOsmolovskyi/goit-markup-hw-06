@@ -39,6 +39,12 @@
         .portfolio-list-img-wrapper {
             position: relative;
             overflow: hidden;
+            width: 100%;
+        }
+
+        .portfolio-item-image {
+            width: 100%;
+            max-height: 280px;
         }
                 
     .overlay {

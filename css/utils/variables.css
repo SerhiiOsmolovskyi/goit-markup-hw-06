@@ -1,0 +1,14 @@
+:root {
+    --primary-color: #2E2F42;
+    --secondary-color: #ffffff;
+    --accent-color: #4D5AE5;
+    --text-color: #434455;
+    --hover-focus: #404bbf;
+    --white-text: #f4f4fd;
+    --btn-border-color: #e7e9fc;
+    --currentColor: #8E8F99;
+    --navyblue-modal: rgba(46, 47, 66, 0.40);
+    --transition-dur-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --dairy-color: #FCFCFC;
+    --footer-sm-link-color: #31d0aa;
+}

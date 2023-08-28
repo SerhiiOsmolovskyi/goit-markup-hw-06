@@ -18,9 +18,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+    <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
+    <!-- HEADER -->
     <header class="page-header">
       <div class="container page-header-container">
         <nav class="page-navigation">
@@ -39,6 +41,16 @@
             </li>
           </ul>
         </nav>
+        <button
+          class="mobile-menu-open-btn js-open-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="mobile-menu-open-btn-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-menu-hamburger"></use>
+          </svg>
+        </button>
         <address class="contacts">
           <ul class="contact-list list">
             <li class="contact-list-item">
@@ -52,6 +64,7 @@
       </div>
     </header>
     <main>
+      <!-- HERO -->
       <section class="hero">
         <div class="container">
           <h1 class="main-title">
@@ -61,6 +74,7 @@
           <button class="order-service-btn" type="button" data-modal-open>Order Service</button>
         </div>
       </section>
+      <!-- VALUES -->
       <section class="values">
         <div class="container">
           <h1 class="visually-hidden">Values</h1>
@@ -116,52 +130,136 @@
           </ul>
         </div>
       </section>
+      <!-- SERVICES -->
       <section class="services">
         <div class="container">
           <h2 class="section-title">What are we doing</h2>
           <ul class="services-list list">
             <li class="services-list-item">
-              <img
-                class="service-image"
-                src="./images/desktop.jpg"
-                alt="Desktop with charts"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <!-- Desktop screen -->
+
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/desktop/desktop.jpg           1x,
+                    ./images/retina-desktop/desktop@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+
+                <!-- <source
+                  media="(min-width: 768px)"
+                  srcset="./images/tablet/ 1x, ./images/gallery/img-1_md@2x.jpg 2x"
+                  type="image/jpg"
+                /> -->
+                <!-- Mobile screen -->
+
+                <!-- <source
+                  media="(max-width: 767px)"
+                  srcset="./images/gallery/img-1_sm.jpg 1x, ./images/gallery/img-1_sm@2x.jpg 2x"
+                  type="image/jpg"
+                /> -->
+                <img
+                  class="service-image"
+                  src="./images/desktop/desktop.jpg"
+                  alt="Desktop with charts"
+                  width="360"
+                  height="300"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="services-list-item">
-              <img
-                class="service-image"
-                src="./images/four-phones.jpg"
-                alt="Four phones with messages"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/desktop/four-phones.jpg           1x,
+                    ./images/retina-desktop/four-phones@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="service-image"
+                  src="./images/desktop/four-phones.jpg"
+                  alt="Four phones with messages"
+                  width="360"
+                  height="300"
+                  loading="lazy"
+                />
+              </picture>
             </li>
             <li class="services-list-item">
-              <img
-                class="service-image"
-                src="./images/phone-and-laptop.jpg"
-                alt="Phone and laptop"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/desktop/phone-and-laptop.jpg           1x,
+                    ./images/retina-desktop/phone-and-laptop@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="service-image"
+                  src="./images/phone-and-laptop.jpg"
+                  alt="Phone and laptop"
+                  width="360"
+                  height="300"
+                  loading="lazy"
+                />
+              </picture>
             </li>
           </ul>
         </div>
       </section>
+      <!-- TEAM -->
       <section class="team">
         <div class="container">
           <h2 class="section-title">Our Team</h2>
           <ul class="team-list list">
             <li class="team-list-item">
-              <img
-                class="team-member-image"
-                src="./images/mark-guerrero.jpg"
-                alt="Mark Guerrero Product Designer"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <!-- Desktop screen -->
+
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/desktop/mark-guerrero.jpg           1x,
+                    ./images/retina-desktop/mark-guerrero@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/tablet/mark-guerrero.jpg           1x,
+                    ./images/retina-tablet/mark-guerrero@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/mobile/mark-guerrero.jpg           1x,
+                    ./images/retina-mobile/mark-guerrero@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="team-member-image"
+                  src="./images/mark-guerrero.jpg"
+                  alt="Mark Guerrero Product Designer"
+                  width="264"
+                  height="260"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team-member">
                 <h3 class="team-member-name">Mark Guerrero</h3>
                 <p class="team-member-role">Product Designer</p>
@@ -218,13 +316,47 @@
               </div>
             </li>
             <li class="team-list-item">
-              <img
-                class="team-member-image"
-                src="./images/tom-ford.jpg"
-                alt="Tom Ford Frontend Developer"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <!-- Desktop screen -->
+
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/desktop/tom-ford.jpg           1x,
+                    ./images/retina-desktop/tom-ford@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/tablet/tom-ford.jpg           1x,
+                    ./images/retina-tablet/tom-ford@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/mobile/tom-ford.jpg           1x,
+                    ./images/retina-mobile/tom-ford@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="team-member-image"
+                  src="./images/tom-ford.jpg"
+                  alt="Tom Ford Frontend Developer"
+                  width="264"
+                  height="260"
+                  loading="lazy"
+                />
+              </picture>
+
               <div class="team-member">
                 <h3 class="team-member-name">Tom Ford</h3>
                 <p class="team-member-role">Frontend Developer</p>
@@ -281,13 +413,46 @@
               </div>
             </li>
             <li class="team-list-item">
-              <img
-                class="team-member-image"
-                src="./images/camila-garcia.jpg"
-                alt="Camila Garcia Marketing"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <!-- Desktop screen -->
+
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/desktop/camila-garcia.jpg           1x,
+                    ./images/retina-desktop/camila-garcia@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/tablet/camila-garcia.jpg           1x,
+                    ./images/retina-tablet/camila-garcia@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/mobile/camila-garcia.jpg           1x,
+                    ./images/retina-mobile/camila-garcia@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="team-member-image"
+                  src="./images/camila-garcia.jpg"
+                  alt="Camila Garcia Marketing"
+                  width="264"
+                  height="260"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team-member">
                 <h3 class="team-member-name">Camila Garcia</h3>
                 <p class="team-member-role">Marketing</p>
@@ -344,13 +509,46 @@
               </div>
             </li>
             <li class="team-list-item">
-              <img
-                class="team-member-image"
-                src="./images/daniel-wilson.jpg"
-                alt="Daniel Wilson UI Designer"
-                width="264"
-                height="260"
-              />
+              <picture>
+                <!-- Desktop screen -->
+
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="
+                    ./images/desktop/daniel-wilson.jpg           1x,
+                    ./images/retina-desktop/daniel-wilson@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/tablet/daniel-wilsonjpg            1x,
+                    ./images/retina-tablet/daniel-wilson@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/mobile/daniel-wilson.jpg           1x,
+                    ./images/retina-mobile/daniel-wilson@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="team-member-image"
+                  src="./images/daniel-wilson.jpg"
+                  alt="Daniel Wilson UI Designer"
+                  width="264"
+                  height="260"
+                  loading="lazy"
+                />
+              </picture>
               <div class="team-member">
                 <h3 class="team-member-name">Daniel Wilson</h3>
                 <p class="team-member-role">UI Designer</p>
@@ -409,8 +607,9 @@
           </ul>
         </div>
       </section>
+      <!-- CUSTOMERS -->
       <section class="customers">
-        <div class="container">
+        <div class="container customers-container">
           <h2 class="section-title">Customers</h2>
           <ul class="customers-list list">
             <li class="customers-list-item">
@@ -459,6 +658,7 @@
         </div>
       </section>
     </main>
+    <!-- FOOTER -->
     <footer class="footer">
       <div class="container">
         <div class="footer-left">
@@ -519,6 +719,7 @@
         </div>
       </div>
     </footer>
+    <!-- MODAL -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="close-btn" data-modal-close>
@@ -587,6 +788,83 @@
         </form>
       </div>
     </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu js-menu-container">
+      <div class="container mobile-menu-container">
+        <button type="button" class="mobile-menu-close-btn js-close-menu" data-modal-close>
+          <svg
+            class="mobile-menu-close-btn-icon"
+            width="8"
+            height="8"
+            aria-label="modal window close icon"
+          >
+            <use href="./images/icons.svg#icon-close-btn"></use>
+          </svg>
+        </button>
+        <nav class="mobile-menu-nav">
+          <ul class="mobile-menu-list list">
+            <li class="mobile-menu-list-item">
+              <a href="./index.html" class="mobile-menu-link link accent-color">Studio</a>
+            </li>
+            <li class="mobile-menu-list-item">
+              <a href="./portfolio.html" class="mobile-menu-link link">Portfolio</a>
+            </li>
+            <li class="mobile-menu-list-item">
+              <a href="" class="mobile-menu-link link">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <address class="mobile-contacts">
+          <ul class="mobile-contact-list list">
+            <li class="mobile-contact-list-item">
+              <a class="mobile-contact-link link accent-color" href="tel:+110001111111"
+                >+11 (000) 111-11-11
+              </a>
+            </li>
+            <li class="mobile-contact-list-item">
+              <a class="mobile-contact-link link" href="mailto:info@devstudio.com"
+                >info@devstudio.com
+              </a>
+            </li>
+          </ul>
+        </address>
+        <ul class="mobile-menu-social-list list">
+          <li class="mobile-menu-social-list-item">
+            <a href="mobile-menu-social-list-link link ">
+              <svg class="mobile-menu-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu-social-list-item">
+            <a href="mobile-menu-social-list-link link"
+              ><svg class="mobile-menu-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use></svg
+            ></a>
+          </li>
+          <li class="mobile-menu-social-list-item">
+            <a href="mobile-menu-social-list-link link"
+              ><svg class="mobile-menu-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use></svg
+            ></a>
+          </li>
+          <li class="mobile-menu-social-list-item">
+            <a href="mobile-menu-social-list-link"
+              ><svg class="mobile-menu-social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use></svg
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>

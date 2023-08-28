@@ -1,0 +1,36 @@
+@media screen and (max-width: 767px) {
+ .services {
+    display: none;
+ }
+}
+
+@media screen and (min-width: 768px) and (max-width:1157px) {
+    .services {
+     display: none;
+    }
+}
+
+@media screen and (min-width:1158px) {
+    .services {
+            padding-bottom: 120px;
+        }
+    
+        .services-list {
+            display: flex;
+            gap: 24px;
+        }
+    
+        .services-list-item {
+            width: calc((100% - 2 * 24 / 3));
+        }
+    
+        .section-title {
+            font-size: 36px;
+            line-height: 1.11;
+            text-align: center;
+            letter-spacing: 0.02em;
+            text-transform: capitalize;
+            color: var(--primary-color);
+            margin-bottom: 72px;
+        }
+}

@@ -1,0 +1,127 @@
+@media screen and (max-width: 767px) {
+    .values {
+        padding: 96px 16px;
+    }
+    
+    
+    .value-list-container {
+        display: none;
+        }
+
+    .values-list {
+        display: flex;
+        flex-direction: column;
+        gap: 72px;
+    }
+
+    .value-title {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: var(--primary-color);
+        margin-bottom: 8px;
+        letter-spacing: 0.4px;
+        font-style: normal;
+        text-align: center;
+    }
+            
+    .value-text {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: var(--text-color);
+    }
+   
+}
+
+@media screen and (min-width: 768px) and (max-width:1157px) {
+
+    .values {
+        padding: 96px 16px;
+    }
+        
+        
+    .value-list-container {
+        display: none;
+    }
+        
+    .values-list {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 72px 24px;
+    }
+
+.values-list-item {
+    width: calc((100% - 24px) / 2);
+    }
+        
+    .value-title {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: var(--primary-color);
+        margin-bottom: 8px;
+        letter-spacing: 0.4px;
+        font-style: normal;
+    }
+        
+    .value-text {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: var(--text-color);
+    }
+}
+
+@media screen and (min-width:1158px) {
+
+    .values {
+            padding: 120px 0;
+        }
+    
+        .values-list {
+            display: flex;
+            gap: 24px;
+        }
+    
+        .value-list-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 112px;
+            background-color: var(--white-text);
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+    
+        .values-list-item {
+            width: calc((100% - 24px * 3) / 4);
+        }
+    
+        /* .values-list-icon {
+      margin: 24px 100px;
+    } */
+    
+    
+        .value-title {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 1.2;
+            letter-spacing: 0.02em;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            letter-spacing: 0.4px;
+            font-style: normal;
+        }
+    
+        .value-text {
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            color: var(--text-color);
+        }
+   
+}
